@@ -1,0 +1,88 @@
+$tablet: 768px;
+$desktop: 1280px;
+
+.gallery__img {
+    width: 280px;
+    height: 402px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+
+    @media screen and (min-width:$tablet) {
+        width: 336px;
+        height: 455px;
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        width: 395px;
+        height: 574px;
+        margin-bottom: 12px;
+    }
+}
+
+.gallery__title {
+    font-family: var(--fontFamily-roboto);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--color-title);
+
+    @media screen and (min-width:1280px) {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+.gallery__genre {
+    font-family: var(--fontFamily-roboto);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--color-genre);
+
+    @media screen and (min-width:1280px) {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+}
+
+.library_delButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 32px;
+    background-color: var(--color-genre);
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    opacity: 0.9;
+    transition: opacity 350ms var(--cubic-bezier);
+    cursor: pointer;
+    &:focus,
+    &:hover {
+        opacity: 1;
+    }
+    &__span{
+        font-family: var(--fontFamily-roboto);
+        font-weight: 500;
+        color: #000;
+        scale: 1;
+        transition: color 400ms var(--cubic-bezier),
+        scale 400ms var(--cubic-bezier);
+    
+    &:focus,
+    &:hover {
+        scale: 1.05;
+        color: #fff;
+    }
+        
+    }
+}
